@@ -49,6 +49,16 @@ p {
     color: #eee;
 }
 
+a:link, a:visited {
+    text-decoration: none;
+    color: #cc1;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
