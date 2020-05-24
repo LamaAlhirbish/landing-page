@@ -46,10 +46,20 @@ function buildNavbar() {
 }
 
 // Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
+function activeSection() {
+    for (const section of sections) {
+        const box = section.getBoundingClientRect();
+        const className = section.getAttribute('id');
+        const activeNavbar = navbarList.querySelector(`.${className}`);
+        if (box.top <= 150 && box.bottom >= 150) {
+            section.classList.add('your-active-class');
+            activeNavbar.classList.add('active');
+        } else {
+            section.classList.remove('your-active-class');
+            activeNavbar.classList.remove('active');
+        }
+    }
+}
 
 /**
  * End Main Functions
@@ -60,8 +70,6 @@ function buildNavbar() {
 // Build menu 
 buildNavbar();
 
-// Scroll to section on link click
-
 // Set sections as active
-
+document.addEventListener('scroll', activeSection);
 
