@@ -40,7 +40,7 @@ function buildNavbar() {
     for (const section of sections) {
         const className = section.getAttribute('id');
         const data = section.getAttribute('data-nav');
-        navbarItem += `<li class="${className}"> <a href="#${className}"> ${data} </a> </li>`;
+        navbarItem += `<li class="${className}"> <a href="#${className}" class="menu__link"> ${data} </a> </li>`;
     }
     navbarList.innerHTML = navbarItem;
 }
@@ -72,4 +72,3 @@ buildNavbar();
 
 // Set sections as active
 document.addEventListener('scroll', activeSection);
-
