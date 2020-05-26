@@ -6,7 +6,7 @@ The 2nd project of Udacity front-end Nano degree.
 ## Table of Contents
 
 - css
-    -styles.css
+    - styles.css
 - js
     - app.js
 - index.html
